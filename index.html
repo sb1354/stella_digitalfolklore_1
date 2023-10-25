@@ -1,0 +1,43 @@
+<head>
+  <meta charset="utf-8">
+	<style>
+    body{
+      cursor: url("C:\Users\stell\OneDrive\Pictures\starblack.gif"),auto;
+    	font-family: "Comic Sans MS",cursive,sans-serif;
+    	background-color: #636B7B;
+    	background-image: url("C:\Users\stell\OneDrive\Pictures\looptotorowalk.gif");
+    	background-repeat: repeat;
+    	}
+  </style>
+<title>Digital Folklore</title>
+</head>
+<body>
+  <h1>
+    Welcome to My Page
+  </h1>
+  <div class="box">
+    <h2>
+      About Me
+    </h2>
+    <p>
+      Hi there! Feel free to explore!
+    </p>
+  </div>
+</body>
+
+<script>
+  function aniCursor () {    
+    const num = document.body.dataset.num
+    const val = `url(images/cursors/rainbow/${num}.gif), auto`
+    document.body.style.cursor = val
+    
+    const max = 22 
+    let nextVal = Number(document.body.dataset.num) + 1
+    if (nextVal > max) nextVal = 0
+    document.body.dataset.num = nextVal
+
+    const delay = 100
+    setTimeout(aniCursor, delay)
+  }
+  
+  window.addEventListener('load', aniCursor)</script>
